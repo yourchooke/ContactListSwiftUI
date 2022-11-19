@@ -63,13 +63,13 @@
 		278E1288292629D9003D2B4A /* ContactListSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				278E129929262E1F003D2B4A /* Person.swift */,
+				278E12A32928EE41003D2B4A /* Model */,
+				278E12A42928EE57003D2B4A /* Managers */,
 				278E1289292629D9003D2B4A /* ContactListSwiftUIApp.swift */,
 				278E129B292636DE003D2B4A /* ContactList.swift */,
 				278E129F2927DA7F003D2B4A /* PersonRow.swift */,
 				278E12A12928E4BB003D2B4A /* ContactDetails.swift */,
 				278E128B292629D9003D2B4A /* ContentView.swift */,
-				278E129729262A43003D2B4A /* DataManager.swift */,
 				278E129D292639D2003D2B4A /* DetailedContactsList.swift */,
 				278E128D292629DB003D2B4A /* Assets.xcassets */,
 				278E128F292629DB003D2B4A /* Preview Content */,
@@ -83,6 +83,22 @@
 				278E1290292629DB003D2B4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		278E12A32928EE41003D2B4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				278E129929262E1F003D2B4A /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		278E12A42928EE57003D2B4A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				278E129729262A43003D2B4A /* DataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

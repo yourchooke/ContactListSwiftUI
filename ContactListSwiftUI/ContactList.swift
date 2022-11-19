@@ -18,15 +18,13 @@ struct ContactList: View {
                 }                
             }
             .listStyle(.plain)
-            .navigationTitle("Contact list")
+            .navigationTitle("Contact List")
         }
-            
-        
     }
 }
 
 struct ContactList_Previews: PreviewProvider {
     static var previews: some View {
-        ContactList()
+        ContactList(contacts: Person.getContacts())
     }
 }

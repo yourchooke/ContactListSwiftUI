@@ -10,12 +10,32 @@ import SwiftUI
 struct DetailedContactsList: View {
     let contacts: [Person]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(contacts, id: \.phone) { contact in
+            Section(header: Text("\(contact.name) \(contact.surname)")) {
+                HStack{
+                    Image(systemName: "face.smiling")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.cyan)
+                    VStack{
+                        HStack{
+                            Image(systemName: "phone")
+                            Text("\(contact.phone)")
+                        }
+                        HStack{
+                            Image(systemName: "envelope")
+                            Text("\(contact.email)")
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Contact List")
+        }
     }
 }
 
 struct DetailedContactsList_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedContactsList()
+        DetailedContactsList(contacts: Person.getContacts())
     }
 }
