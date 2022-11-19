@@ -11,11 +11,17 @@ struct ContactList: View {
     
     let contacts = Person.getContacts()
     var body: some View {
-        VStack {
-            ForEach(contacts, id: \.phone) { contact in
-                PersonRow(person: contact)
+        NavigationView {
+            List(contacts, id: \.phone) { contact in
+                NavigationLink(destination: ContactDetails(person: contact)) {
+                    PersonRow(person: contact)
+                }                
             }
+            .listStyle(.plain)
+            .navigationTitle("Contact list")
         }
+            
+        
     }
 }
 

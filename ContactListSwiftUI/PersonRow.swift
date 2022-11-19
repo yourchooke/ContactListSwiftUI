@@ -14,8 +14,9 @@ struct PersonRow: View {
         
         HStack {
             Text("\(person.name) \(person.surname)")
-            Spacer()
+                .font(.title2)
         }
+        .padding()
         
     }
 }
