@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContactList: View {
+    let contacts: [Person]
     
-    let contacts = Person.getContacts()
     var body: some View {
         NavigationView {
             List(contacts, id: \.phone) { contact in
